@@ -20,12 +20,25 @@ class PlayerFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentPlayerBinding.inflate(layoutInflater)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val recycler = binding.RecyclerFragmentPlay
         recycler.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         recycler.adapter = RecyclerViewAdapter()
-        return binding.root
+
+        val videoView = binding.VideoViewFragmentPlay
+        val videoPath =
+            "https://storage.googleapis.com/assets-stage-bgrem-deelvin-com/bg/videos/nature_3.mp4"
+
+        videoView.setVideoPath(videoPath)
+        videoView.start()
+
+        videoView.setOnCompletionListener { videoView.resume() }
     }
 
     override fun onDestroyView() {
