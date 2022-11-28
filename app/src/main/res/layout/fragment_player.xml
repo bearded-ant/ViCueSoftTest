@@ -25,16 +25,17 @@
         android:id="@+id/BtnFragmentPlayAddText"
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_height"
-        android:text="@string/btn_text"
         android:layout_marginBottom="@dimen/btn_margin_bottom"
-        app:layout_constraintBottom_toTopOf="@id/ViewPagerFragmentPlay"
+        android:text="@string/btn_text"
+        app:layout_constraintBottom_toTopOf="@id/RecyclerFragmentPlay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/ViewPagerFragmentPlay"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerFragmentPlay"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/view_pager_height"
+        android:scrollbars="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

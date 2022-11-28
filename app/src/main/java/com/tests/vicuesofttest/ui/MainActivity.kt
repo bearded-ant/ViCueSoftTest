@@ -1,7 +1,8 @@
-package com.tests.vicuesofttest
+package com.tests.vicuesofttest.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.tests.vicuesofttest.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
