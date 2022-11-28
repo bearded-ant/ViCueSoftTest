@@ -2,13 +2,20 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/itemPosterCard"
-    android:layout_width="@dimen/poster_size"
-    android:layout_height="@dimen/poster_size"
-    app:cardCornerRadius="@dimen/poster_corner_radius">
+    android:layout_width="@dimen/poster_card_width"
+    android:layout_height="@dimen/poster_card_height"
+    app:cardBackgroundColor="#F5F5F6"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/itemPosterImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="@dimen/poster_size"
+        android:layout_height="@dimen/poster_size"
+        android:layout_marginHorizontal="@dimen/small_indent"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="6dp"
+        android:background="@color/black"
+        app:shapeAppearanceOverlay="@style/roundedImageView" />
 
 </com.google.android.material.card.MaterialCardView>
