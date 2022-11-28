@@ -7,9 +7,11 @@
     android:padding="@dimen/small_indent">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/VideoViewContainerFragmentPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="@dimen/player_corner_radius"
+        app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +20,8 @@
         <VideoView
             android:id="@+id/VideoViewFragmentPlay"
             android:layout_width="match_parent"
-            android:layout_height="208dp" />
+            android:layout_height="wrap_content" />
+
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.button.MaterialButton
@@ -39,4 +42,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editThisTextFieldFragmentPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:hint="@string/edit_this_hint"
+        android:text="@string/edit_this_hint"
+        android:textColor="#65DE63"
+        android:textColorHint="#65DE63"
+        android:textSize="@dimen/text_size"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/VideoViewContainerFragmentPlay"
+        app:layout_constraintTop_toTopOf="@id/VideoViewContainerFragmentPlay" />
 </androidx.constraintlayout.widget.ConstraintLayout>
